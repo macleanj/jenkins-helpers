@@ -9,7 +9,7 @@ It includes:
 [leiningen]: https://leiningen.org/
 
 ### Build
-The build of the image itself is realized by Jenkins. Only the compiled application/service will be added to the registry. The helper is not supposed to be promoted to production deployments as such.
+The build of the helper image itself is realized by Jenkins using this repository. During the build of the actual applications or service (realized outside this repo) this image will be used as a helper to compile and test the code. The helper is not supposed to be promoted to production deployments as such.
 
 ### Usage
 The helper can be used calling the ```h_clojure``` the k8 agent. This can be configured by specifying the name at ```environments.<env>.agent.name```. Example:

@@ -1,0 +1,18 @@
+appName: 'Multi App pipeline. appName taken from tag'
+loglevel: 'TRACE'
+job:
+  throttle: 5
+config:
+  build:
+    buildEnvironment: 'test'
+  pr:
+    buildEnabled: 1
+    deployEnabled: 0
+    buildEnvironment: 'dev'
+  environments:
+    generic:
+      appNamePrefix: 'jenkins-'
+      appNamePostfix: '-helper'
+      agent:
+        name: 's_helper+ephemeral_storage'
+        # name: 's_helper'

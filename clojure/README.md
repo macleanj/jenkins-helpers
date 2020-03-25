@@ -14,5 +14,5 @@ The build of the helper image itself is realized by Jenkins using this repositor
 ### Usage
 The helper can be used calling the ```h_clojure``` the k8 agent. This can be configured by specifying the name at ```environments.<env>.agent.name```. Example:
 ```
-environments.generic.agent.name: 's_helper+h_clojure'
+environments.generic.agent.name: 's_mini+h_clojure'
 ```

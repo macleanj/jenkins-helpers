@@ -14,5 +14,4 @@ config:
       appNamePrefix: 'jenkins-'
       appNamePostfix: '-helper'
       agent:
-        name: 's_helper+ephemeral_storage'
-        # name: 's_helper'
+        name: 's_helper'

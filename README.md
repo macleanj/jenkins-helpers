@@ -1,9 +1,8 @@
 # Overview
-More cloud environments are prepared to build Docker images as part of the CICD pipeline, however lack (or restrict) the capability to run in privilged mode. This excludes DinD, DooD, or mounting the docker socket to be able to build images.
+To support the building, compiling and testing process, the jenkins-builder can be assisted by specific code. Think of needing NodeJS or Maven as part of the build process. Instead of making one huge agent with all specific code included the pod containing the builder and agent can be supplemented with a helper.
 
-This initiative is based on building Docker images in a conainerized environment without having access to the socket or having elivated privileges. The build will be based on the [IMG docker build solution](https://github.com/genuinetools/img).
+Examples are:
+- NodeJS0
+- Clojure
 
-Test command not using privileged mode:
-```
-docker run --rm -it --security-opt seccomp=unconfined --security-opt apparmor=unconfined -v $(pwd):/app r.j3ss.co/img build -t jmaclean/jenkins-builder /app
-```
+See the specific documentation how to extend the agent with one or more helpers.

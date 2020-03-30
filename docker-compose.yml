@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  jenkins-closure-helper:
+    hostname: clojure
+    container_name: clojure
+    build:
+      context: ./clojure/
+      dockerfile: Dockerfile
+    image: local_build/clojure
+    command: tail -f /dev/null

@@ -12,7 +12,9 @@ config:
     deployEnvironment: 'int'
   environments:
     generic:
-      appNamePrefix: 'jenkins-'
-      appNamePostfix: '-helper'
+      # appNamePrefix: 'jenkins-'
+      # appNamePostfix: '-helper'
+      appNamePrefix: ''
+      appNamePostfix: ''
       agent:
         name: 's_helper'
